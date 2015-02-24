@@ -7,13 +7,13 @@ $(function() {
     in: {
       effect: 'marqueeIn',
       delayScale: 1.5,
-      delay: 50,
+      delay: 0,
       sync: true
     },
     out: {
       effect: 'marqueeOut',
       delayScale: 1.5,
-      delay: 50,
+      delay: 0,
       sync: true
     },
     type: 'line'
