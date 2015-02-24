@@ -24,12 +24,17 @@ $(function() {
     minDisplayTime: 0,
     autoStart: true,
     in: {
-      effect: 'fadeIn',
-      reverse: true
+      effect: 'middleOutIn',
+      bothSides: true,
+      delayScale: 1,
+      delay: 50,
     },
     out: {
-      effect: 'fadeOut',
-      reverse: true
+      effect: 'middleOutOut',
+      bothSides: true,
+      revers: true,
+      delayScale: 1,
+      delay: 50,
     },
     type: 'char'
   });
