@@ -1,8 +1,5 @@
 body {
   background: #222 url('../img/bg.png');
-}
-
-.site-wrapper {
   overflow-x: hidden;
 }
 
@@ -191,7 +188,7 @@ hr {
 }
 @keyframes middleOutInLeft {
     0% {
-        transform: scaleX(0) translateX(25vw);
+        transform: scaleX(0) translateX(500px);
         opacity: 0;
     }
 
@@ -259,7 +256,7 @@ hr {
         opacity: 1;
     }
   100% {
-        transform: translateX(-25vw);
+        transform: translateX(-500px);
         opacity: 0;
     }
 }
@@ -337,7 +334,7 @@ hr {
 }
 @keyframes middleOutInRight {
     0% {
-        transform: scaleX(0) translateX(-25vw);
+        transform: scaleX(0) translateX(-500px);
         opacity: 0;
     }
 
@@ -405,7 +402,7 @@ hr {
         opacity: 1;
     }
   100% {
-        transform: translateX(25vw);
+        transform: translateX(500px);
         opacity: 0;
     }
 }
