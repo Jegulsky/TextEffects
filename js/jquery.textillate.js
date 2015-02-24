@@ -62,7 +62,7 @@
     });
   }
 
-  function animateTokens ($tokens, options, cb) {
+  function animateTokens($tokens, options, cb) {
     var that = this
       , count = $tokens.length;
 
@@ -71,29 +71,86 @@
       return;
     }
 
-    if (options.shuffle) $tokens = shuffle($tokens);
-    if (options.reverse) $tokens = $tokens.toArray().reverse();
-    if (options.bothSides) $bulks = $tokens.toArray().reverse();
+    if (options.shuffle) {
+      $tokens = shuffle($tokens);
+    }
+    if (options.reverse) {
+      $tokens = $tokens.toArray().reverse();
+    }
+    if (options.bothSides) {
+      var $bulks = []
+        , $half = Math.round((count - 1) / 2);
 
-    $.each($tokens, function (i, t) {
-      var $token = $(t);
-
-      function complete () {
-        if (isInEffect(options.effect)) {
-          $token.css('visibility', 'visible');
-        } else if (isOutEffect(options.effect)) {
-          $token.css('visibility', 'hidden');
-        }
-        count -= 1;
-        if (!count && cb) cb();
+      if (options.reverse) {
+        $bulks[0] = $tokens.toArray().slice(0, $half).reverse();
+        $bulks[1] = $tokens.toArray().slice($half - count);
+      } else {
+        $bulks[0] = $tokens.toArray().slice(0, $half);
+        $bulks[1] = $tokens.toArray().slice($half - count).reverse();
       }
 
-      var delay = options.sync ? options.delay : options.delay * i * options.delayScale;
+      $.each($bulks[0], function (i, t) {
+        var $token = $(t);
 
-      $token.text() ?
-        setTimeout(function () { animate($token, options.effect, complete) }, delay) :
-        complete();
-    });
+        function complete () {
+          if (isInEffect(options.effect)) {
+            $token.css('visibility', 'visible');
+          } else if (isOutEffect(options.effect)) {
+            $token.css('visibility', 'hidden');
+          }
+          count -= 1;
+          if (!count && cb) cb();
+        }
+
+        var delay = options.sync ? options.delay : options.delay * i * options.delayScale;
+
+        $token.text() ?
+          setTimeout(function () { animate($token, options.effect + 'Left', complete) }, delay) :
+          complete();
+      });
+
+      $.each($bulks[1], function (i, t) {
+        var $token = $(t);
+
+        function complete () {
+          if (isInEffect(options.effect)) {
+            $token.css('visibility', 'visible');
+          } else if (isOutEffect(options.effect)) {
+            $token.css('visibility', 'hidden');
+          }
+          count -= 1;
+          if (!count && cb) cb();
+        }
+
+        var delay = options.sync ? options.delay : options.delay * i * options.delayScale;
+
+        $token.text() ?
+          setTimeout(function () { animate($token, options.effect + 'Right', complete) }, delay) :
+          complete();
+      });
+
+    } else {
+      $.each($tokens, function (i, t) {
+        var $token = $(t);
+
+        function complete () {
+          if (isInEffect(options.effect)) {
+            $token.css('visibility', 'visible');
+          } else if (isOutEffect(options.effect)) {
+            $token.css('visibility', 'hidden');
+          }
+          count -= 1;
+          if (!count && cb) cb();
+        }
+
+        var delay = options.sync ? options.delay : options.delay * i * options.delayScale;
+
+        $token.text() ?
+          setTimeout(function () { animate($token, options.effect, complete) }, delay) :
+          complete();
+      });
+    }
+
   };
 
   var Textillate = function (element, options) {
