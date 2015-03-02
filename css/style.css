@@ -13,7 +13,7 @@ hr {
 @-webkit-keyframes marqueeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(1000px);
+    -webkit-transform: translateX(500px);
   }
 
   100% {
@@ -25,7 +25,7 @@ hr {
 @-moz-keyframes marqueeIn {
   0% {
     opacity: 0;
-    -moz-transform: translateX(1000px);
+    -moz-transform: translateX(500px);
   }
 
   100% {
@@ -37,7 +37,7 @@ hr {
 @-o-keyframes marqueeIn {
   0% {
     opacity: 0;
-    -o-transform: translateX(1000px);
+    -o-transform: translateX(500px);
   }
 
   100% {
@@ -49,7 +49,7 @@ hr {
 @keyframes marqueeIn {
   0% {
     opacity: 0;
-    transform: translateX(1000px);
+    transform: translateX(500px);
   }
 
   100% {
@@ -59,10 +59,10 @@ hr {
 }
 
 .marqueeIn {
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  -o-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
   -webkit-animation-name: marqueeIn;
   -moz-animation-name: marqueeIn;
   -o-animation-name: marqueeIn;
@@ -77,7 +77,7 @@ hr {
 
   100% {
     opacity: 0;
-    -webkit-transform: translateX(-1000px);
+    -webkit-transform: translateX(-500px);
   }
 }
 
@@ -89,7 +89,7 @@ hr {
 
   100% {
     opacity: 0;
-    -moz-transform: translateX(-1000px);
+    -moz-transform: translateX(-500px);
   }
 }
 
@@ -101,7 +101,7 @@ hr {
 
   100% {
     opacity: 0;
-    -o-transform: translateX(-1000px);
+    -o-transform: translateX(-500px);
   }
 }
 
@@ -113,15 +113,15 @@ hr {
 
   100% {
     opacity: 0;
-    transform: translateX(-1000px);
+    transform: translateX(-500px);
   }
 }
 
 .marqueeOut {
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  -o-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
   -webkit-animation-name: marqueeOut;
   -moz-animation-name: marqueeOut;
   -o-animation-name: marqueeOut;
