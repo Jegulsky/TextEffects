@@ -2,7 +2,7 @@ $(function() {
   $('.tlt-marquee').textillate({
     loop: true,
     initialDelay: 0,
-    minDisplayTime: 0,
+    minDisplayTime: 1000,
     autoStart: true,
     in: {
       effect: 'marqueeIn',
