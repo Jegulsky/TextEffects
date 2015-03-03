@@ -13,7 +13,7 @@ hr {
 @-webkit-keyframes marqueeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(500px);
+    -webkit-transform: translateX(300px);
   }
 
   100% {
@@ -25,7 +25,7 @@ hr {
 @-moz-keyframes marqueeIn {
   0% {
     opacity: 0;
-    -moz-transform: translateX(500px);
+    -moz-transform: translateX(300px);
   }
 
   100% {
@@ -37,7 +37,7 @@ hr {
 @-o-keyframes marqueeIn {
   0% {
     opacity: 0;
-    -o-transform: translateX(500px);
+    -o-transform: translateX(300px);
   }
 
   100% {
@@ -49,7 +49,7 @@ hr {
 @keyframes marqueeIn {
   0% {
     opacity: 0;
-    transform: translateX(500px);
+    transform: translateX(300px);
   }
 
   100% {
@@ -59,14 +59,20 @@ hr {
 }
 
 .marqueeIn {
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -o-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+
   -webkit-animation-name: marqueeIn;
   -moz-animation-name: marqueeIn;
   -o-animation-name: marqueeIn;
   animation-name: marqueeIn;
+
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes marqueeOut {
@@ -77,7 +83,7 @@ hr {
 
   100% {
     opacity: 0;
-    -webkit-transform: translateX(-500px);
+    -webkit-transform: translateX(-300px);
   }
 }
 
@@ -89,7 +95,7 @@ hr {
 
   100% {
     opacity: 0;
-    -moz-transform: translateX(-500px);
+    -moz-transform: translateX(-300px);
   }
 }
 
@@ -101,7 +107,7 @@ hr {
 
   100% {
     opacity: 0;
-    -o-transform: translateX(-500px);
+    -o-transform: translateX(-300px);
   }
 }
 
@@ -113,19 +119,25 @@ hr {
 
   100% {
     opacity: 0;
-    transform: translateX(-500px);
+    transform: translateX(-300px);
   }
 }
 
 .marqueeOut {
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -o-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+
   -webkit-animation-name: marqueeOut;
   -moz-animation-name: marqueeOut;
   -o-animation-name: marqueeOut;
   animation-name: marqueeOut;
+
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 
